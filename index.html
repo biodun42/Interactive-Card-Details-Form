@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Interactive Card Details Form</title>
+</head>
+<body>
+  <main>
+    <div class="main-bg">
+      <div class="cards">
+        <div class="card-back">
+          <p class="card-cvc-placeholder">000</p>
+        </div>
+        <div class="card-front">
+          <img src="./images/card-logo.svg" alt="" class="logo">
+          <p class="card-number">0000 0000 0000 0000</p>
+          <p class="card-holder">Jane Appleseed</p>
+          <p class="card-exp"><span class="card-exp-mm-placeholder">00</span>/<span class="card-exp-yy-placeholder">00</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="form">
+      <form class="form-input">
+        <label for="CARDHOLDER NAME">CARDHOLDER NAME</label>
+        <input type="text" placeholder="e.g Jane Appleseed" class="cardholder-name input-field">
+        <label for="CARDHOLDER NUMBER">CARD NUMBER</label>
+        <input type="text" placeholder="e.g 1234 5678 9123 0000" maxlength="16" class="card-number-input input-field"> 
+        <div class="input-groups">
+          <div class="input-group-1">
+            <label for="EXP DATE" class="mm-yy-label">EXP. DATE (MM/YY)</label>
+            <input type="text" placeholder="MM" maxlength="2" class="card-exp-mm input-field">
+            <input type="text" placeholder="YY" maxlength="2" class="card-exp-yy input-field">
+          </div>
+          <div class="input-group-2">
+            <label for="CVC">CVC</label>
+            <input type="text" placeholder="e.g 123" maxlength="3" class="card-cvc input-field">
+          </div>
+        </div>
+        <button class="confirm-btn" type="button">Confirms</button>
+      </form>
+      <div class="success-msg">
+        <img src="images/icon-complete.svg" alt="">
+        <p class="thanks">Thank you!</p>
+        <p>We've added your card details</p>
+        <button onclick="window.location.reload();">Continue</button>
+      </div>
+    </div>
+  </main>
+<script src="app.js"></script>
+</body>
+</html>
